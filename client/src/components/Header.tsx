@@ -18,11 +18,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0D1B3D]/95 backdrop-blur-md border-b border-white/10">
       <div className="container flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3">
-          <div>
-            <span className="text-xl font-black text-white italic">iprint</span>
-            <span className="text-xs block text-[#D4AF37] font-medium tracking-widest">impressao 3D</span>
-          </div>
+        <a href="#" className="flex items-center gap-2">
+          <span className="text-xl font-black text-white italic">iprint</span>
+          <span className="text-xs text-[#D4AF37] font-medium tracking-widest">impressao 3D</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

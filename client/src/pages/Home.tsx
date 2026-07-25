@@ -4,25 +4,25 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   const phoneNumber = '5549999592489';
-  const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
+  const message = 'Ola! Gostaria de solicitar um orcamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const depoimentos = [
     {
       nome: 'Ana Paula S.',
-      cidade: 'Chapecó – SC',
-      texto: 'Recebi a escultura do meu golden e chorei de emoção. Cada detalhe do pelo, dos olhos... é exatamente ele. Melhor presente que já recebi.',
+      cidade: 'Chapeco - SC',
+      texto: 'Recebi a escultura do meu golden e chorei de emocao. Cada detalhe do pelo, dos olhos... e exatamente ele. Melhor presente que ja recebi.',
       estrelas: 5,
     },
     {
       nome: 'Carlos M.',
-      cidade: 'Florianópolis – SC',
-      texto: 'Perdi minha gata há 3 meses. A escultura da iPrint me deu um conforto que não esperava. Parece que ela ainda está aqui.',
+      cidade: 'Florianopolis - SC',
+      texto: 'Perdi minha gata ha 3 meses. A escultura da iPrint me deu um conforto que nao esperava. Parece que ela ainda esta aqui.',
       estrelas: 5,
     },
     {
       nome: 'Fernanda L.',
-      cidade: 'São Paulo – SP',
+      cidade: 'Sao Paulo - SP',
       texto: 'Qualidade impressionante! A resina 16K captura detalhes que eu nem sabia que existiam. Vale cada centavo.',
       estrelas: 5,
     },
@@ -50,13 +50,13 @@ export default function Home() {
 
           <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
             Esculturas personalizadas em resina 16K com fidelidade impressionante.
-            Cada pelo, cada expressão, cada detalhe único do seu companheiro — preservado para sempre.
+            Cada pelo, cada expressao, cada detalhe unico do seu companheiro — preservado para sempre.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-[#D4AF37]/20">
-                Solicitar Orçamento
+              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl">
+                Solicitar Orcamento
                 <ArrowRight size={20} />
               </button>
             </a>
@@ -70,9 +70,9 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16 pt-16 border-t border-white/10">
             {[
-              { valor: '16K', label: 'Resolução em Resina' },
+              { valor: '16K', label: 'Resolucao em Resina' },
               { valor: '100%', label: 'Personalizado' },
-              { valor: 'Brasil', label: 'Entregamos em todo' },
+              { valor: 'Brasil', label: 'Enviamos para todo' },
             ].map((n, i) => (
               <div key={i} className="text-center">
                 <p className="text-3xl font-black text-[#D4AF37]">{n.valor}</p>
@@ -92,22 +92,18 @@ export default function Home() {
               Esculturas 3D
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              Réplicas fiéis do seu pet em resina de alta definição. Cada peça é única, produzida com a impressora Saturn 4 e acabamento premium.
+              Replicas fieis do seu pet em resina de alta definicao. Cada peca e unica, produzida com a impressora Saturn 4 e acabamento premium.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[
-              { img: '/manus-storage/iprint-portfolio-1_2f84f53c.jpg', title: 'Cão de pequeno porte', desc: 'Resina 16K · Tamanho P' },
+              { img: '/manus-storage/iprint-portfolio-1_2f84f53c.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
               { img: '/manus-storage/iprint-hero-bg_3b3351a7.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
               { img: '/manus-storage/iprint-portfolio-2_e9978ab7.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B3D] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-1">{item.desc}</p>
                   <h3 className="text-white text-lg font-bold">{item.title}</h3>
@@ -137,10 +133,10 @@ export default function Home() {
                 <span className="text-[#D4AF37]">Premium</span>
               </h2>
               <p className="text-white/60 text-lg leading-relaxed mb-6">
-                Para quem perdeu um companheiro, a urna memorial da iPrint é uma forma de guardar com dignidade, amor e beleza a memória de quem tanto amou.
+                Para quem perdeu um companheiro, a urna memorial da iPrint e uma forma de guardar com dignidade, amor e beleza a memoria de quem tanto amou.
               </p>
               <p className="text-white/60 text-lg leading-relaxed mb-8">
-                Produzidas em resina 16K, com personalização completa — nome, raça, e detalhes únicos do seu pet.
+                Produzidas em resina 16K, com personalizacao completa — nome, raca, e detalhes unicos do seu pet.
               </p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl">
@@ -151,11 +147,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-[#D4AF37]/10 rounded-3xl blur-xl" />
-              <img
-                src="/manus-storage/iprint-portfolio-2_e9978ab7.jpg"
-                alt="Urna Memorial Premium"
-                className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl"
-              />
+              <img src="/manus-storage/iprint-portfolio-2_e9978ab7.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
             </div>
           </div>
         </div>
@@ -165,7 +157,7 @@ export default function Home() {
       <section id="como-funciona" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
-            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rápido</span>
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rapido</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
               Como funciona?
             </h2>
@@ -173,9 +165,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais ângulos, melhor o resultado.' },
-              { num: '02', title: 'Aprovação do modelo', desc: 'Enviamos o modelo 3D digital para sua aprovação antes de imprimir.' },
-              { num: '03', title: 'Impressão 16K', desc: 'Produzimos com a Saturn 4 em resina de ultra alta definição.' },
+              { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais angulos, melhor o resultado.' },
+              { num: '02', title: 'Aprovacao do modelo', desc: 'Enviamos o modelo 3D digital para sua aprovacao antes de imprimir.' },
+              { num: '03', title: 'Impressao 16K', desc: 'Produzimos com a Saturn 4 em resina de ultra alta definicao.' },
               { num: '04', title: 'Entrega em casa', desc: 'Enviamos para todo o Brasil em embalagem premium e segura.' },
             ].map((step, i) => (
               <div key={i} className="text-center group">
@@ -200,9 +192,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Star, title: 'Resina 16K Ultra HD', desc: 'A impressora Saturn 4 captura detalhes invisíveis a olho nu — pelos, textura da pele, expressão do olhar.' },
-              { icon: Heart, title: 'Feito com amor', desc: 'Cada peça é produzida com cuidado e respeito pela memória do seu companheiro.' },
-              { icon: Shield, title: 'Garantia de satisfação', desc: 'Aprovação do modelo antes da impressão. Se não gostar, refazemos sem custo adicional.' },
+              { icon: Star, title: 'Resina 16K Ultra HD', desc: 'A impressora Saturn 4 captura detalhes invisiveis a olho nu — pelos, textura da pele, expressao do olhar.' },
+              { icon: Heart, title: 'Feito com amor', desc: 'Cada peca e produzida com cuidado e respeito pela memoria do seu companheiro.' },
+              { icon: Shield, title: 'Garantia de satisfacao', desc: 'Aprovacao do modelo antes da impressao. Se nao gostar, refazemos sem custo adicional.' },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -212,74 +204,3 @@ export default function Home() {
                   </div>
                   <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
                   <p className="text-white/50 leading-relaxed">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* DEPOIMENTOS */}
-      <section id="depoimentos" className="py-24 bg-[#0D1B3D]">
-        <div className="container">
-          <div className="text-center mb-16">
-            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Quem já eternizou</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
-              Depoimentos
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {depoimentos.map((dep, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-[#060D1F] border border-white/10">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(dep.estrelas)].map((_, j) => (
-                    <Star key={j} size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
-                  ))}
-                </div>
-                <p className="text-white/70 leading-relaxed mb-6 italic">"{dep.texto}"</p>
-                <div>
-                  <p className="text-white font-bold">{dep.nome}</p>
-                  <p className="text-white/40 text-sm">{dep.cidade}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
-      <section id="contato" className="py-24 bg-[#060D1F]">
-        <div className="container text-center">
-          <div className="max-w-2xl mx-auto">
-            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Comece agora</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-              Eternize a memória<br />do seu pet hoje
-            </h2>
-            <p className="text-white/60 text-lg mb-10">
-              Entre em contato pelo WhatsApp e receba um orçamento personalizado em minutos. Enviamos para todo o Brasil.
-            </p>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-10 py-5 rounded-full text-xl transition-all hover:shadow-2xl hover:shadow-[#D4AF37]/20 mx-auto">
-                Falar no WhatsApp
-                <ArrowRight size={22} />
-              </button>
-            </a>
-            <p className="text-white/30 text-sm mt-6">
-              Chapecó – SC · Envio para todo o Brasil · @iprint3dchapeco
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeIn 0.8s ease-out; }
-      `}</style>
-    </div>
-  );
-}
