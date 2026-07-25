@@ -98,9 +98,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[
-              { img: '/manus-storage/iprint-portfolio-1_2f84f53c.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
-              { img: '/manus-storage/iprint-hero-bg_3b3351a7.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
-              { img: '/manus-storage/iprint-portfolio-2_e9978ab7.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
+              { img: '/images/portfolio-1.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
+              { img: '/images/hero.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
+              { img: '/images/portfolio-2.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-[#D4AF37]/10 rounded-3xl blur-xl" />
-              <img src="/manus-storage/iprint-portfolio-2_e9978ab7.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
+              <img src="/images/portfolio-2.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
             </div>
           </div>
         </div>
