@@ -32,27 +32,20 @@ export default function Home() {
     <div className="min-h-screen bg-[#060D1F]">
       <Header />
 
-      {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B3D] to-[#060D1F]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)]" />
-
         <div className="relative z-10 container text-center px-4 py-32">
           <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-4 py-2 mb-8">
             <Star size={14} className="text-[#D4AF37]" />
             <span className="text-[#D4AF37] text-sm font-medium">Tecnologia Saturn 4 · Resina 16K Ultra HD</span>
           </div>
-
           <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
             Eternize seu pet<br />
             <span className="text-[#D4AF37]">para sempre</span>
           </h1>
-
           <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Esculturas personalizadas em resina 16K com fidelidade impressionante.
-            Cada pelo, cada expressao, cada detalhe unico do seu companheiro — preservado para sempre.
+            Esculturas personalizadas em resina 16K com fidelidade impressionante. Cada pelo, cada expressao, cada detalhe unico do seu companheiro preservado para sempre.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl">
@@ -67,7 +60,6 @@ export default function Home() {
               </button>
             </a>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16 pt-16 border-t border-white/10">
             {[
               { valor: '16K', label: 'Resolucao em Resina' },
@@ -83,24 +75,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ESCULTURAS */}
       <section id="esculturas" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
             <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Nosso Produto Principal</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">
-              Esculturas 3D
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">Esculturas 3D</h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
               Replicas fieis do seu pet em resina de alta definicao. Cada peca e unica, produzida com a impressora Saturn 4 e acabamento premium.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[
-              { img: '/portfolio-1.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
-              { img: '/hero.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
-              { img: '/portfolio-2.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
+              { img: '/images/portfolio-1.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
+              { img: '/images/hero.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
+              { img: '/images/portfolio-2.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -111,7 +99,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
           <div className="text-center">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl">
@@ -122,7 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* URNAS */}
       <section id="urnas" className="py-24 bg-[#060D1F]">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -147,22 +133,18 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-[#D4AF37]/10 rounded-3xl blur-xl" />
-              <img src="/portfolio-2.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
+              <img src="/images/portfolio-2.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
       <section id="como-funciona" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
             <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rapido</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
-              Como funciona?
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">Como funciona?</h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais angulos, melhor o resultado.' },
@@ -182,7 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIFERENCIAIS */}
       <section className="py-24 bg-[#060D1F]">
         <div className="container">
           <div className="text-center mb-16">
@@ -204,3 +185,62 @@ export default function Home() {
                   </div>
                   <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
                   <p className="text-white/50 leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" className="py-24 bg-[#0D1B3D]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Quem ja eternizou</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">Depoimentos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {depoimentos.map((dep, i) => (
+              <div key={i} className="p-8 rounded-2xl bg-[#060D1F] border border-white/10">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(dep.estrelas)].map((_, j) => (
+                    <Star key={j} size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
+                  ))}
+                </div>
+                <p className="text-white/70 leading-relaxed mb-6 italic">"{dep.texto}"</p>
+                <div>
+                  <p className="text-white font-bold">{dep.nome}</p>
+                  <p className="text-white/40 text-sm">{dep.cidade}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" className="py-24 bg-[#060D1F]">
+        <div className="container text-center">
+          <div className="max-w-2xl mx-auto">
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Comece agora</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+              Eternize a memoria<br />do seu pet hoje
+            </h2>
+            <p className="text-white/60 text-lg mb-10">
+              Entre em contato pelo WhatsApp e receba um orcamento personalizado em minutos. Enviamos para todo o Brasil.
+            </p>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-10 py-5 rounded-full text-xl transition-all hover:shadow-2xl mx-auto">
+                Falar no WhatsApp
+                <ArrowRight size={22} />
+              </button>
+            </a>
+            <p className="text-white/30 text-sm mt-6">
+              Chapeco - SC · Envio para todo o Brasil · @iprint3dchapeco
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
