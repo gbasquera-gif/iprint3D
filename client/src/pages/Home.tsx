@@ -1,5 +1,4 @@
-import { ArrowRight, Heart, Star, Package } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowRight, Heart, Star, Shield, ChevronRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -8,125 +7,211 @@ export default function Home() {
   const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  const diferenciais = [
+  const depoimentos = [
     {
-      icon: Star,
-      title: 'Resina 16K Ultra HD',
-      description: 'Tecnologia Saturn 4 com resolução 16K captura cada pelo, expressão e detalhe único do seu pet com fidelidade impressionante.'
+      nome: 'Ana Paula S.',
+      cidade: 'Chapecó – SC',
+      texto: 'Recebi a escultura do meu golden e chorei de emoção. Cada detalhe do pelo, dos olhos... é exatamente ele. Melhor presente que já recebi.',
+      estrelas: 5,
     },
     {
-      icon: Heart,
-      title: 'Feito com Amor',
-      description: 'Cada peça é produzida com cuidado e dedicação, respeitando a memória e o vínculo especial entre você e seu pet.'
+      nome: 'Carlos M.',
+      cidade: 'Florianópolis – SC',
+      texto: 'Perdi minha gata há 3 meses. A escultura da iPrint me deu um conforto que não esperava. Parece que ela ainda está aqui.',
+      estrelas: 5,
     },
     {
-      icon: Package,
-      title: 'Embalagem Premium',
-      description: 'Sua escultura chega protegida em embalagem especial, pronta para ser exibida ou presenteada com muito carinho.'
-    }
-  ];
-
-  const produtos = [
-    {
-      title: 'Escultura Personalizada',
-      image: '/manus-storage/iprint-portfolio-1_2f84f53c.jpg',
-      category: 'Mais Popular',
-      description: 'Réplica fiel do seu pet em resina de alta definição'
+      nome: 'Fernanda L.',
+      cidade: 'São Paulo – SP',
+      texto: 'Qualidade impressionante! A resina 16K captura detalhes que eu nem sabia que existiam. Vale cada centavo.',
+      estrelas: 5,
     },
-    {
-      title: 'Urna Memorial Premium',
-      image: '/manus-storage/iprint-portfolio-2_e9978ab7.jpg',
-      category: 'Memorial',
-      description: 'Urna personalizada para guardar com amor e dignidade'
-    }
-  ];
-
-  const numeros = [
-    { valor: '16K', label: 'Resolução em Resina' },
-    { valor: '100%', label: 'Personalizado' },
-    { valor: 'BR', label: 'Envio para todo Brasil' },
-  ];
-
-  const passos = [
-    { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais detalhadas, melhor o resultado.' },
-    { num: '02', title: 'Aprovação', desc: 'Enviamos o modelo 3D para sua aprovação antes de iniciar a impressão.' },
-    { num: '03', title: 'Impressão 16K', desc: 'Produzimos sua peça com resina de alta definição na Saturn 4.' },
-    { num: '04', title: 'Entrega', desc: 'Enviamos para todo o Brasil em embalagem premium protegida.' },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#060D1F]">
       <Header />
 
-      {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-white to-muted">
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B3D] to-[#060D1F]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)]" />
+
+        <div className="relative z-10 container text-center px-4 py-32">
+          <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-4 py-2 mb-8">
+            <Star size={14} className="text-[#D4AF37]" />
+            <span className="text-[#D4AF37] text-sm font-medium">Tecnologia Saturn 4 · Resina 16K Ultra HD</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+            Eternize seu pet<br />
+            <span className="text-[#D4AF37]">para sempre</span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Esculturas personalizadas em resina 16K com fidelidade impressionante.
+            Cada pelo, cada expressão, cada detalhe único do seu companheiro — preservado para sempre.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-[#D4AF37]/20">
+                Solicitar Orçamento
+                <ArrowRight size={20} />
+              </button>
+            </a>
+            <a href="#esculturas">
+              <button className="flex items-center gap-2 border border-white/20 text-white hover:border-[#D4AF37] hover:text-[#D4AF37] font-semibold px-8 py-4 rounded-full text-lg transition-all">
+                Ver Esculturas
+                <ChevronRight size={20} />
+              </button>
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16 pt-16 border-t border-white/10">
+            {[
+              { valor: '16K', label: 'Resolução em Resina' },
+              { valor: '100%', label: 'Personalizado' },
+              { valor: 'Brasil', label: 'Entregamos em todo' },
+            ].map((n, i) => (
+              <div key={i} className="text-center">
+                <p className="text-3xl font-black text-[#D4AF37]">{n.valor}</p>
+                <p className="text-sm text-white/50 mt-1">{n.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ESCULTURAS */}
+      <section id="esculturas" className="py-24 bg-[#0D1B3D]">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <p className="text-sm font-bold text-accent uppercase tracking-widest">
-                Cada detalhe, uma memória.
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Eternize seu pet para <span className="text-accent">sempre</span>
-              </h1>
-              <p className="text-base text-foreground/80 leading-relaxed max-w-lg">
-                Esculturas e urnas personalizadas em resina 16K com fidelidade impressionante.
-                Cada pelo, cada expressão, cada detalhe único do seu companheiro — preservado para sempre.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 px-8 flex items-center gap-2 transition-all hover:shadow-lg">
-                    Solicitar Orçamento
-                    <ArrowRight size={18} />
-                  </Button>
-                </a>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground h-12 px-8 font-semibold">
-                  Ver Portfólio
-                </Button>
+          <div className="text-center mb-16">
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Nosso Produto Principal</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">
+              Esculturas 3D
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+              Réplicas fiéis do seu pet em resina de alta definição. Cada peça é única, produzida com a impressora Saturn 4 e acabamento premium.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[
+              { img: '/manus-storage/iprint-portfolio-1_2f84f53c.jpg', title: 'Cão de pequeno porte', desc: 'Resina 16K · Tamanho P' },
+              { img: '/manus-storage/iprint-hero-bg_3b3351a7.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
+              { img: '/manus-storage/iprint-portfolio-2_e9978ab7.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
+            ].map((item, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B3D] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                  <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-1">{item.desc}</p>
+                  <h3 className="text-white text-lg font-bold">{item.title}</h3>
+                </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-6 pt-8 border-t border-border">
-                {numeros.map((n, i) => (
-                  <div key={i}>
-                    <p className="text-2xl font-bold text-accent">{n.valor}</p>
-                    <p className="text-sm text-foreground/70">{n.label}</p>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl">
+                Quero minha escultura
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* URNAS */}
+      <section id="urnas" className="py-24 bg-[#060D1F]">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Memorial</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+                Urnas Memoriais<br />
+                <span className="text-[#D4AF37]">Premium</span>
+              </h2>
+              <p className="text-white/60 text-lg leading-relaxed mb-6">
+                Para quem perdeu um companheiro, a urna memorial da iPrint é uma forma de guardar com dignidade, amor e beleza a memória de quem tanto amou.
+              </p>
+              <p className="text-white/60 text-lg leading-relaxed mb-8">
+                Produzidas em resina 16K, com personalização completa — nome, raça, e detalhes únicos do seu pet.
+              </p>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl">
+                  Solicitar Urna Memorial
+                  <ArrowRight size={18} />
+                </button>
+              </a>
             </div>
-            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-2xl animate-fade-in-delayed">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[#D4AF37]/10 rounded-3xl blur-xl" />
               <img
-                src="/manus-storage/iprint-hero-bg_3b3351a7.jpg"
-                alt="Escultura 3D de Pet"
-                className="w-full h-full object-cover"
+                src="/manus-storage/iprint-portfolio-2_e9978ab7.jpg"
+                alt="Urna Memorial Premium"
+                className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Diferenciais */}
-      <section className="py-20 md:py-28 bg-white">
+      {/* COMO FUNCIONA */}
+      <section id="como-funciona" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Por que escolher a <span className="text-accent">iPrint 3D</span>?
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rápido</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+              Como funciona?
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Somos pioneiros em esculturas e urnas personalizadas de pets no Oeste de Santa Catarina,
-              com tecnologia de ponta e muito carinho em cada peça.
-            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais ângulos, melhor o resultado.' },
+              { num: '02', title: 'Aprovação do modelo', desc: 'Enviamos o modelo 3D digital para sua aprovação antes de imprimir.' },
+              { num: '03', title: 'Impressão 16K', desc: 'Produzimos com a Saturn 4 em resina de ultra alta definição.' },
+              { num: '04', title: 'Entrega em casa', desc: 'Enviamos para todo o Brasil em embalagem premium e segura.' },
+            ].map((step, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-16 h-16 rounded-full border-2 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-black text-xl mx-auto mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0D1B3D] transition-all duration-300">
+                  {step.num}
+                </div>
+                <h3 className="font-bold text-white text-lg mb-3">{step.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIFERENCIAIS */}
+      <section className="py-24 bg-[#060D1F]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-white">
+              Por que escolher a <span className="text-[#D4AF37]">iPrint 3D</span>?
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {diferenciais.map((item, idx) => {
+            {[
+              { icon: Star, title: 'Resina 16K Ultra HD', desc: 'A impressora Saturn 4 captura detalhes invisíveis a olho nu — pelos, textura da pele, expressão do olhar.' },
+              { icon: Heart, title: 'Feito com amor', desc: 'Cada peça é produzida com cuidado e respeito pela memória do seu companheiro.' },
+              { icon: Shield, title: 'Garantia de satisfação', desc: 'Aprovação do modelo antes da impressão. Se não gostar, refazemos sem custo adicional.' },
+            ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="group p-8 rounded-xl border border-border bg-white hover:shadow-lg hover:border-accent transition-all duration-300 hover:-translate-y-1">
-                  <div className="mb-4 inline-block p-3 bg-accent/10 rounded-lg group-hover:bg-accent group-hover:text-accent-foreground transition-all">
-                    <Icon size={28} className="text-accent group-hover:text-accent-foreground" />
+                <div key={i} className="p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-all">
+                    <Icon size={24} className="text-[#D4AF37]" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{item.description}</p>
+                  <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
+                  <p className="text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
               );
             })}
@@ -134,73 +219,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Produtos */}
-      <section id="portfolio" className="py-20 md:py-28 bg-muted">
+      {/* DEPOIMENTOS */}
+      <section id="depoimentos" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Nossos <span className="text-accent">Produtos</span>
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Quem já eternizou</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+              Depoimentos
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Cada peça é única, produzida com tecnologia 16K e acabamento premium.
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {depoimentos.map((dep, i) => (
+              <div key={i} className="p-8 rounded-2xl bg-[#060D1F] border border-white/10">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(dep.estrelas)].map((_, j) => (
+                    <Star key={j} size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
+                  ))}
+                </div>
+                <p className="text-white/70 leading-relaxed mb-6 italic">"{dep.texto}"</p>
+                <div>
+                  <p className="text-white font-bold">{dep.nome}</p>
+                  <p className="text-white/40 text-sm">{dep.cidade}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section id="contato" className="py-24 bg-[#060D1F]">
+        <div className="container text-center">
+          <div className="max-w-2xl mx-auto">
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Comece agora</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+              Eternize a memória<br />do seu pet hoje
+            </h2>
+            <p className="text-white/60 text-lg mb-10">
+              Entre em contato pelo WhatsApp e receba um orçamento personalizado em minutos. Enviamos para todo o Brasil.
+            </p>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-10 py-5 rounded-full text-xl transition-all hover:shadow-2xl hover:shadow-[#D4AF37]/20 mx-auto">
+                Falar no WhatsApp
+                <ArrowRight size={22} />
+              </button>
+            </a>
+            <p className="text-white/30 text-sm mt-6">
+              Chapecó – SC · Envio para todo o Brasil · @iprint3dchapeco
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {produtos.map((produto, idx) => (
-              <div key={idx} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                <img
-                  src={produto.image}
-                  alt={produto.title}
-                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <p className="text-accent text-sm font-semibold mb-2">{produto.category}</p>
-                  <h3 className="text-white text-xl font-bold">{produto.title}</h3>
-                  <p className="text-white/80 text-sm mt-1">{produto.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Como funciona */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Como <span className="text-accent">funciona</span>?
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {passos.map((step, i) => (
-              <div key={i} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold text-lg mx-auto mb-4">
-                  {step.num}
-                </div>
-                <h3 className="font-bold text-primary mb-2">{step.title}</h3>
-                <p className="text-sm text-foreground/70">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Eternize a memória do seu pet hoje
-          </h2>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Entre em contato pelo WhatsApp e receba um orçamento personalizado. Enviamos para todo o Brasil.
-          </p>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 px-8 flex items-center gap-2 mx-auto transition-all hover:shadow-lg">
-              Solicitar Orçamento pelo WhatsApp
-              <ArrowRight size={18} />
-            </Button>
-          </a>
         </div>
       </section>
 
@@ -208,18 +275,10 @@ export default function Home() {
 
       <style>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
+          from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes fadeInDelayed {
-          from { opacity: 0; transform: translateX(20px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        .animate-fade-in { animation: fadeIn 0.6s ease-out; }
-        .animate-fade-in-delayed { animation: fadeInDelayed 0.8s ease-out 0.2s both; }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-fade-in, .animate-fade-in-delayed { animation: none; opacity: 1; transform: none; }
-        }
+        .animate-fade-in { animation: fadeIn 0.8s ease-out; }
       `}</style>
     </div>
   );
