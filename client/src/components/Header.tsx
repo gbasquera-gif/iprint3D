@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0D1B3D]/95 backdrop-blur-md border-b border-white/10">
       <div className="container flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center gap-3">
           <div>
             <span className="text-xl font-black text-white italic">iprint</span>
             <span className="text-xs block text-[#D4AF37] font-medium tracking-widest">impressao 3D</span>
@@ -27,11 +27,7 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors duration-200"
-            >
+            <a key={item.label} href={item.href} className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors duration-200">
               {item.label}
             </a>
           ))}
@@ -46,10 +42,7 @@ export default function Header() {
           </a>
         </div>
 
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
-        >
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -58,12 +51,7 @@ export default function Header() {
         <div className="md:hidden bg-[#0D1B3D] border-t border-white/10">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              
-                key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <a key={item.label} href={item.href} className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {item.label}
               </a>
             ))}
