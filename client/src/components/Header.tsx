@@ -4,7 +4,7 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const phoneNumber = '5549999592489';
-  const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
+  const message = 'Ola! Gostaria de solicitar um orcamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const navItems = [
@@ -21,7 +21,7 @@ export default function Header() {
         <a href="#" className="flex items-center gap-3 group">
           <div>
             <span className="text-xl font-black text-white italic">iprint</span>
-            <span className="text-xs block text-[#D4AF37] font-medium tracking-widest">impressão 3D</span>
+            <span className="text-xs block text-[#D4AF37] font-medium tracking-widest">impressao 3D</span>
           </div>
         </a>
 
@@ -30,19 +30,18 @@ export default function Header() {
             
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors duration-200 relative group"
+              className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors duration-200"
             >
               {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
         <div className="hidden md:block">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-6 py-2.5 rounded-full transition-all hover:shadow-lg">
+            <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-6 py-2 rounded-full transition-all">
               <MessageCircle size={16} />
-              Solicitar Orçamento
+              Solicitar Orcamento
             </button>
           </a>
         </div>
@@ -70,7 +69,7 @@ export default function Header() {
             ))}
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="w-full bg-[#D4AF37] text-[#0D1B3D] font-bold py-3 rounded-full mt-4">
-                Solicitar Orçamento
+                Solicitar Orcamento
               </button>
             </a>
           </nav>
