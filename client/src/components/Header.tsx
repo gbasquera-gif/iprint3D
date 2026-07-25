@@ -19,7 +19,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0D1B3D]/95 backdrop-blur-md border-b border-white/10">
       <div className="container flex items-center justify-between h-20">
         <a href="#" className="flex items-center gap-2">
-          <img src="/images/logo.png" alt="iPrint 3D" className="h-16 w-auto max-w-[560px]" />
+          <img src="/images/logo.png" alt="iPrint 3D" style={{height: '60px', width: 'auto'}} />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
