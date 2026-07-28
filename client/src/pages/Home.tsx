@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-[#D4AF37]/10 rounded-3xl blur-xl" />
-              <img src="/images/portfolio-2.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-square shadow-2xl" />
+              <img src="/images/portfolio-2.jpg" alt="Urna Memorial Premium" className="relative rounded-2xl w-full object-cover aspect-[3/5] shadow-2xl" />
             </div>
           </div>
         </div>
