@@ -91,7 +91,7 @@ export default function Home() {
               { img: '/images/portfolio-2.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B3D] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-1">{item.desc}</p>
                   <h3 className="text-white text-lg font-bold">{item.title}</h3>
