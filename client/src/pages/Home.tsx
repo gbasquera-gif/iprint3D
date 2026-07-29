@@ -115,7 +115,13 @@ export default function Home() {
 
       <div id="visualizar-3d">
         <LazyOnVisible minHeight={720}>
-          <Suspense fallback={null}>
+          <Suspense
+            fallback={
+              <div className="py-24 bg-[#060D1F] flex items-center justify-center" style={{ minHeight: 720 }}>
+                <div className="w-10 h-10 border-2 border-[#D4AF37]/30 border-t-[#D4AF37] rounded-full animate-spin" />
+              </div>
+            }
+          >
             <ModelViewer3D />
           </Suspense>
         </LazyOnVisible>
