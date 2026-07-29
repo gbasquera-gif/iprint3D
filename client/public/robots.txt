@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iprint3dchapeco.com.br/sitemap.xml
