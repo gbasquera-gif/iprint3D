@@ -1,6 +1,10 @@
+import { lazy, Suspense } from 'react';
 import { ArrowRight, Heart, Star, Shield, ChevronRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import LazyOnVisible from '@/components/LazyOnVisible';
+
+const ModelViewer3D = lazy(() => import('@/components/ModelViewer3D'));
 
 export default function Home() {
   const phoneNumber = '5549999592489';
@@ -108,6 +112,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div id="visualizar-3d">
+        <LazyOnVisible minHeight={720}>
+          <Suspense fallback={null}>
+            <ModelViewer3D />
+          </Suspense>
+        </LazyOnVisible>
+      </div>
 
       <section id="urnas" className="py-24 bg-[#060D1F]">
         <div className="container">

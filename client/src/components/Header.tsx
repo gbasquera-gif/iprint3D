@@ -9,6 +9,7 @@ export default function Header() {
 
   const navItems = [
     { label: 'Esculturas', href: '#esculturas' },
+    { label: 'Explore em 3D', href: '#visualizar-3d' },
     { label: 'Urnas', href: '#urnas' },
     { label: 'Como Funciona', href: '#como-funciona' },
     { label: 'Depoimentos', href: '#depoimentos' },
