@@ -2,7 +2,7 @@ import { Phone, MapPin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const phoneNumber = '5549999592489';
+  const phoneNumber = '5549991551724';
   const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -40,7 +40,7 @@ export default function Footer() {
               <li className="flex items-center gap-2 text-white/60">
                 <Phone size={16} className="text-[#D4AF37]" />
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">
-                  (49) 99959-2489
+                  (49) 99155-1724
                 </a>
               </li>
               <li className="flex items-center gap-2 text-white/60">

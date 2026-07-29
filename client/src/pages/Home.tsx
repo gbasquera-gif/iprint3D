@@ -7,26 +7,26 @@ import LazyOnVisible from '@/components/LazyOnVisible';
 const ModelViewer3D = lazy(() => import('@/components/ModelViewer3D'));
 
 export default function Home() {
-  const phoneNumber = '5549999592489';
-  const message = 'Ola! Gostaria de solicitar um orcamento para escultura 3D do meu pet.';
+  const phoneNumber = '5549991551724';
+  const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const depoimentos = [
     {
       nome: 'Ana Paula S.',
-      cidade: 'Chapeco - SC',
-      texto: 'Recebi a escultura do meu golden e chorei de emocao. Cada detalhe do pelo, dos olhos... e exatamente ele. Melhor presente que ja recebi.',
+      cidade: 'Chapecó - SC',
+      texto: 'Recebi a escultura do meu golden e chorei de emoção. Cada detalhe do pelo, dos olhos... é exatamente ele. Melhor presente que já recebi.',
       estrelas: 5,
     },
     {
       nome: 'Carlos M.',
-      cidade: 'Florianopolis - SC',
-      texto: 'Perdi minha gata ha 3 meses. A escultura da iPrint me deu um conforto que nao esperava. Parece que ela ainda esta aqui.',
+      cidade: 'Florianópolis - SC',
+      texto: 'Perdi minha gata há 3 meses. A escultura da iPrint me deu um conforto que não esperava. Parece que ela ainda está aqui.',
       estrelas: 5,
     },
     {
       nome: 'Fernanda L.',
-      cidade: 'Sao Paulo - SP',
+      cidade: 'São Paulo - SP',
       texto: 'Qualidade impressionante! A resina 16K captura detalhes que eu nem sabia que existiam. Vale cada centavo.',
       estrelas: 5,
     },
@@ -48,12 +48,12 @@ export default function Home() {
             <span className="text-[#D4AF37]">para sempre</span>
           </h1>
           <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Esculturas personalizadas em resina 16K com fidelidade impressionante. Cada pelo, cada expressao, cada detalhe unico do seu companheiro preservado para sempre.
+            Esculturas personalizadas em resina 16K com fidelidade impressionante. Cada pelo, cada expressão, cada detalhe único do seu companheiro preservado para sempre.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl">
-                Solicitar Orcamento
+                Solicitar Orçamento
                 <ArrowRight size={20} />
               </button>
             </a>
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16 pt-16 border-t border-white/10">
             {[
-              { valor: '16K', label: 'Resolucao em Resina' },
+              { valor: '16K', label: 'Resolução em Resina' },
               { valor: '100%', label: 'Personalizado' },
               { valor: 'Brasil', label: 'Enviamos para todo' },
             ].map((n, i) => (
@@ -85,12 +85,12 @@ export default function Home() {
             <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Nosso Produto Principal</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">Esculturas 3D</h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              Replicas fieis do seu pet em resina de alta definicao. Cada peca e unica, produzida com a impressora Saturn 4 e acabamento premium.
+              Réplicas fiéis do seu pet em resina de alta definição. Cada peça é única, produzida com a impressora Saturn 4 e acabamento premium.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[
-              { img: '/images/portfolio-1.jpg', title: 'Cao de pequeno porte', desc: 'Resina 16K · Tamanho P' },
+              { img: '/images/portfolio-1.jpg', title: 'Cão de pequeno porte', desc: 'Resina 16K · Tamanho P' },
               { img: '/images/hero.jpg', title: 'Gato persa', desc: 'Resina 16K · Tamanho M' },
               { img: '/images/portfolio-2.jpg', title: 'Golden Retriever', desc: 'Resina 16K · Tamanho G' },
             ].map((item, i) => (
@@ -137,10 +137,10 @@ export default function Home() {
                 <span className="text-[#D4AF37]">Premium</span>
               </h2>
               <p className="text-white/60 text-lg leading-relaxed mb-6">
-                Para quem perdeu um companheiro, a urna memorial da iPrint e uma forma de guardar com dignidade, amor e beleza a memoria de quem tanto amou.
+                Para quem perdeu um companheiro, a urna memorial da iPrint é uma forma de guardar com dignidade, amor e beleza a memória de quem tanto amou.
               </p>
               <p className="text-white/60 text-lg leading-relaxed mb-8">
-                Produzidas em resina 16K, com personalizacao completa — nome, raca, e detalhes unicos do seu pet.
+                Produzidas em resina 16K, com personalização completa — nome, raça, e detalhes únicos do seu pet.
               </p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl">
@@ -160,14 +160,14 @@ export default function Home() {
       <section id="como-funciona" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
-            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rapido</span>
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Simples e rápido</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3">Como funciona?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais angulos, melhor o resultado.' },
-              { num: '02', title: 'Aprovacao do modelo', desc: 'Enviamos o modelo 3D digital para sua aprovacao antes de imprimir.' },
-              { num: '03', title: 'Impressao 16K', desc: 'Produzimos com a Saturn 4 em resina de ultra alta definicao.' },
+              { num: '01', title: 'Envie a foto', desc: 'Mande fotos do seu pet pelo WhatsApp — quanto mais ângulos, melhor o resultado.' },
+              { num: '02', title: 'Aprovação do modelo', desc: 'Enviamos o modelo 3D digital para sua aprovação antes de imprimir.' },
+              { num: '03', title: 'Impressão 16K', desc: 'Produzimos com a Saturn 4 em resina de ultra alta definição.' },
               { num: '04', title: 'Entrega em casa', desc: 'Enviamos para todo o Brasil em embalagem premium e segura.' },
             ].map((step, i) => (
               <div key={i} className="text-center group">
@@ -191,9 +191,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Star, title: 'Resina 16K Ultra HD', desc: 'A impressora Saturn 4 captura detalhes invisiveis a olho nu — pelos, textura da pele, expressao do olhar.' },
-              { icon: Heart, title: 'Feito com amor', desc: 'Cada peca e produzida com cuidado e respeito pela memoria do seu companheiro.' },
-              { icon: Shield, title: 'Garantia de satisfacao', desc: 'Aprovacao do modelo antes da impressao. Se nao gostar, refazemos sem custo adicional.' },
+              { icon: Star, title: 'Resina 16K Ultra HD', desc: 'A impressora Saturn 4 captura detalhes invisíveis a olho nu — pelos, textura da pele, expressão do olhar.' },
+              { icon: Heart, title: 'Feito com amor', desc: 'Cada peça é produzida com cuidado e respeito pela memória do seu companheiro.' },
+              { icon: Shield, title: 'Garantia de satisfação', desc: 'Aprovação do modelo antes da impressão. Se não gostar, refazemos sem custo adicional.' },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -213,7 +213,7 @@ export default function Home() {
       <section id="depoimentos" className="py-24 bg-[#0D1B3D]">
         <div className="container">
           <div className="text-center mb-16">
-            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Quem ja eternizou</span>
+            <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Quem já eternizou</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3">Depoimentos</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -240,10 +240,10 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Comece agora</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-              Eternize a memoria<br />do seu pet hoje
+              Eternize a memória<br />do seu pet hoje
             </h2>
             <p className="text-white/60 text-lg mb-10">
-              Entre em contato pelo WhatsApp e receba um orcamento personalizado em minutos. Enviamos para todo o Brasil.
+              Entre em contato pelo WhatsApp e receba um orçamento personalizado em minutos. Enviamos para todo o Brasil.
             </p>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-10 py-5 rounded-full text-xl transition-all hover:shadow-2xl mx-auto">
@@ -252,7 +252,7 @@ export default function Home() {
               </button>
             </a>
             <p className="text-white/30 text-sm mt-6">
-              Chapeco - SC · Envio para todo o Brasil · @iprint3dchapeco
+              Chapecó - SC · Envio para todo o Brasil · @iprint3dchapeco
             </p>
           </div>
         </div>
