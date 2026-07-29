@@ -10,7 +10,7 @@ export const models3D = [
 
 export default function ModelViewer3D() {
   return (
-    <section className="py-24 bg-[#0D1B3D]">
+    <section className="py-24 bg-[#060D1F]">
       <div className="container">
         <div className="text-center mb-16">
           <span className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest">Novidade</span>
@@ -21,7 +21,7 @@ export default function ModelViewer3D() {
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {models3D.map((item, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square w-full max-w-sm bg-[#060D1F] border border-white/10">
+            <div key={i} className="group relative overflow-hidden rounded-2xl aspect-square w-full max-w-sm bg-[#0D1B3D] border border-white/10">
               <model-viewer
                 src={item.model}
                 alt={item.title}
@@ -31,7 +31,7 @@ export default function ModelViewer3D() {
                 shadow-intensity="1"
                 exposure="1"
                 loading="lazy"
-                style={{ width: "100%", height: "100%", backgroundColor: "#060D1F" }}
+                style={{ width: "100%", height: "100%", backgroundColor: "#0D1B3D" }}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0D1B3D] to-transparent pointer-events-none flex flex-col justify-end p-6">
                 <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-1">{item.desc}</p>

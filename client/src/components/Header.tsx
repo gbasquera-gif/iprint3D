@@ -23,7 +23,7 @@ export default function Header() {
           <img src="/images/logo.png" alt="iPrint 3D" style={{height: '60px', width: 'auto'}} />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-8">
           {navItems.map((item) => (
             <a key={item.label} href={item.href} className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors duration-200">
               {item.label}
@@ -31,7 +31,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden xl:block">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-6 py-2 rounded-full transition-all">
               <MessageCircle size={16} />
@@ -40,13 +40,13 @@ export default function Header() {
           </a>
         </div>
 
-        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="xl:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0D1B3D] border-t border-white/10">
+        <div className="xl:hidden bg-[#0D1B3D] border-t border-white/10">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <a key={item.label} href={item.href} className="text-sm font-medium text-white/80 hover:text-[#D4AF37] transition-colors" onClick={() => setMobileMenuOpen(false)}>
