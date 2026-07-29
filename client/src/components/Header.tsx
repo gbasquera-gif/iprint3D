@@ -3,8 +3,8 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const phoneNumber = '5549999592489';
-  const message = 'Ola! Gostaria de solicitar um orcamento para escultura 3D do meu pet.';
+  const phoneNumber = '5549991551724';
+  const message = 'Olá! Gostaria de solicitar um orçamento para escultura 3D do meu pet.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const navItems = [
@@ -35,7 +35,7 @@ export default function Header() {
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <button className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0D1B3D] font-bold px-6 py-2 rounded-full transition-all">
               <MessageCircle size={16} />
-              Solicitar Orcamento
+              Solicitar Orçamento
             </button>
           </a>
         </div>
@@ -55,7 +55,7 @@ export default function Header() {
             ))}
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="w-full bg-[#D4AF37] text-[#0D1B3D] font-bold py-3 rounded-full mt-4">
-                Solicitar Orcamento
+                Solicitar Orçamento
               </button>
             </a>
           </nav>

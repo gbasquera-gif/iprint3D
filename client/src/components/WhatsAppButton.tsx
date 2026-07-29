@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const phoneNumber = '5511999999999'; // Substitua pelo número real
+  const phoneNumber = '5549991551724';
   const message = 'Olá! Gostaria de solicitar um orçamento para impressão 3D.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
